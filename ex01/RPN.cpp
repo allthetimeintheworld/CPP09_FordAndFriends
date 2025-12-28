@@ -41,7 +41,8 @@ bool RPN::isNumber(const std::string& token) const
 			return false;
 	}
 	
-	return token.length() > start; // Make sure there's at least one digit
+	return token.length() > start; 
+	// Make sure there's at least one digit
 }
 
 void RPN::performOperation(const std::string& op)
@@ -49,7 +50,7 @@ void RPN::performOperation(const std::string& op)
 	if (_stack.size() < 2)
 		throw std::runtime_error("Error: insufficient operands");
 	
-	// Pop two operands (note the order!)
+	// Pop two operands (note the order!) remember stack oder you dolt!
 	int b = _stack.top();
 	_stack.pop();
 	int a = _stack.top();
